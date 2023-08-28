@@ -2,11 +2,11 @@
   "name": "front-end-challenge",
   "version": "1.0.0",
   "description": "Teste da VAGAS.COM para pessoa desenvolvedora front-end",
-  "main": "index.html",
+  "main": "./src/index.html",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel ./src/index.html --open",
     "lint": "eslint .",
-    "build": "parcel build index.html",
+    "build": "parcel build ./src/index.html",
     "prepare": "husky install"
   },
   "husky": {
