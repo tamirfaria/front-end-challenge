@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: "Installing Dependencies"
+
+      - name: "Installing dependencies"
         run: "npm ci"
-      - name: "Running Lint"
+
+      - name: "Running Eslint"
         run: "npm run lint"
