@@ -52,6 +52,7 @@ body {
 
 .header .title {
   color: #fff;
+  background-color: #2f3676;
   font-size: 23px;
   font-weight: 300;
   line-height: 35px;
@@ -61,6 +62,7 @@ body {
 
 .header .title em {
   color: #fff;
+  background-color: #2f3676;
   font-size: 24px;
   font-weight: 700;
   font-style: normal;
@@ -236,4 +238,8 @@ body {
 
 .error-message#disabled {
   visibility: hidden;
+}
+
+.only-reader {
+  display: none;
 }

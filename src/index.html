@@ -24,22 +24,17 @@
           <legend class="legend">Quais stickers</legend>
 
           <label class="sticker-label">
-            <input class="sticker-checkbox" id="react-checkbox"
-            type="checkbox"
-            name="sticker"
-            value="React" />
+            <input class="sticker-checkbox" id="react-checkbox" type="checkbox" name="sticker" value="React" />
             React
           </label>
 
           <label class="sticker-label">
-            <input class="sticker-checkbox" id="vue-checkbox" type="checkbox" name="sticker"
-            value="Vue" />
+            <input class="sticker-checkbox" id="vue-checkbox" type="checkbox" name="sticker" value="Vue" />
             Vue
           </label>
 
           <label class="sticker-label">
-            <input class="sticker-checkbox" id="angular-checkbox" type="checkbox" name="sticker"
-            value="Angular" />
+            <input class="sticker-checkbox" id="angular-checkbox" type="checkbox" name="sticker" value="Angular" />
             Angular
           </label>
           <span class="error-message" id="disabled">Escolha ao menos um dos tipos de sticker!</span>
@@ -57,7 +52,8 @@
             </button>
 
             <label>
-              <input type="text" class="count-sticker" name="quantidade" value="0" placeholder="0" disabled/>
+              <input type="text" class="count-sticker" name="quantidade" value="0" placeholder="0" disabled />
+              <p class="only-reader">Quantidade</p>
             </label>
 
             <button type="button" id="increment" aria-label="Aumentar a quantidade de stickers selecionados">
@@ -74,6 +70,7 @@
           <legend class="legend">Observações:</legend>
           <label>
             <textarea name="descricao" placeholder="Digite aqui suas observações" id="observation"></textarea>
+            <p class="only-reader">Observações</p>
           </label>
         </fieldset>
 
