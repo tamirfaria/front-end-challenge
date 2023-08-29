@@ -34,39 +34,44 @@ body {
   margin-bottom: 16px;
 }
 
-.space-md {
-  margin-bottom: 32px;
-}
-
-.label {
+.legend {
+  color: #071723;
   font-size: 18px;
   font-weight: 600;
+  padding-bottom: 15px;
 }
 
 .header {
   background: url(../public/images/header.png) center right no-repeat;
   background-size: cover;
   height: 187px;
-  padding: 23px 36px;
+  padding: 23px 0 0 31px;
   width: 100%;
+  margin-bottom: 32px;
 }
 
 .header .title {
   color: #fff;
   font-size: 23px;
   font-weight: 300;
+  line-height: 35px;
+  width: 219px;
+  height: 99px;
 }
 
-.header .title span {
-  font-weight: bold;
+.header .title em {
+  color: #fff;
   font-size: 24px;
-  line-height: 1.46;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 35px;
 }
 
 .form textarea {
   background: #dde3e9;
   border: 1px solid #2f3676;
-  border-radius: 8px;
+  font-family: Inter;
+  border-radius: 4px;
   color: #071723;
   height: 140px;
   padding: 16px;
@@ -76,28 +81,108 @@ body {
 }
 
 .fieldset {
-  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 36px;
+  border: none;
+  margin-bottom: 32px;
+  gap: 8px;
 }
 
-.counter svg {
-  fill: #2f3676;
+.sticker-label {
+  display: flex;
+  color: #071723;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  gap: 9px;
 }
 
-.counter input {
-  background: #dde3e9;
+.sticker-checkbox {
+  border-color: #2f3676;
+  background-color: #2f3676;
+  appearance: none;
+  border-radius: 0.2em;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.sticker-checkbox#error {
+  border-color: #f59393;
+  background: #f59393;
+}
+
+.sticker-checkbox:hover {
+  border-color: #191847;
+  background-color: #191847;
+}
+
+.sticker-checkbox:checked {
+  color: #fff;
+  background: #2f3676
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAANCAYAAACkTj4ZAAAAAXNSR0IArs4c6QAAATlJREFUOE+l07FLVmEUB+DnZIFQg4sgRNJ/EDhFiItuYRBkgw0NDaJEiAmRS7Q0KSKktAdN0dAS7gmBY7i5CCE5iEMRZsOR83GFkO/DPrvTHX4897y/897wH09mDmIYH+O8TmYO4A1GMXMuKDP78Ba38R13u4Yy8wpeYRo/MVtoV1Bm9uAFnqLen2M1Io7+GcrMyhbyDJcw3yB/qufIzF5cw07J7crPzIt4iGVUfg0LEfHrJF/QHSziHZYi4sdpLDPH8Rq17srNRcTe37mCVvAENc16a5UR305CmTmC9+jHJzyIiIPTHyvoMl5iCrWRz3iMrxjCB1zFF0xExG6747fKbrDJOjeuY7uKxD3cwhYeYTMisiPUYBdwoynyJn4329nHWE3YCWltrU2xdYy6+jXJIe5HxMZZv9Ix83BjpPhSRU8AAAAASUVORK5CYII=)
+    50% 50% no-repeat;
+}
+
+.sticker-checkbox:disabled {
+  border-color: #c5cfd6;
+  background-color: #c5cfd6;
+}
+
+.counter {
+  display: flex;
+  gap: 8px;
+}
+
+.counter input:disabled {
+  border-radius: 4px;
   border: 1px solid #2f3676;
+  background: #dde3e9;
   border-radius: 7px;
   font-size: 20px;
   font-weight: bold;
-  margin: 0 8px;
+  text-align: center;
   width: 60px;
+  height: 42px;
+}
+
+.counter #error {
+  border-color: #f33232;
+  background: #f59393;
+}
+
+.count-sticker#error {
+  border-color: #f33232;
+  background: #f59393;
+}
+
+.counter button {
+  border: none;
+  background: #2f3676;
+  font-weight: bold;
+  color: #fff;
+  font-size: 36px;
+  width: 42px;
+  height: 42px;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+.counter button:hover {
+  background: #191847;
+}
+
+.counter button:disabled {
+  background: #c5cfd6;
 }
 
 .footer {
   padding: 32px;
   background: #dde3e9;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer button {
@@ -111,10 +196,44 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   padding: 8px 32px;
+  cursor: pointer;
 }
 
 .footer button:focus,
 .footer button:hover {
-  border: 2px solid #2f3676;
+  border-color: #2f3676;
   background: #191847;
+}
+
+.screen-reader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.submition-message {
+  color: #00c57c;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.submition-message#disabled {
+  visibility: hidden;
+}
+
+.error-message {
+  font-size: 14px;
+  color: #f33232;
+  padding-top: 8px;
+  font-weight: bold;
+}
+
+.error-message#disabled {
+  visibility: hidden;
 }
