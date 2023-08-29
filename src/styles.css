@@ -239,3 +239,7 @@ body {
 .error-message#disabled {
   visibility: hidden;
 }
+
+.only-reader {
+  display: none;
+}
