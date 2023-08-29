@@ -108,6 +108,11 @@ body {
   cursor: pointer;
 }
 
+.sticker-checkbox#error {
+  border-color: #f59393;
+  background: #f59393;
+}
+
 .sticker-checkbox:hover {
   border-color: #191847;
   background-color: #191847;
@@ -120,12 +125,17 @@ body {
     50% 50% no-repeat;
 }
 
+.sticker-checkbox:disabled {
+  border-color: #c5cfd6;
+  background-color: #c5cfd6;
+}
+
 .counter {
   display: flex;
   gap: 8px;
 }
 
-.counter input {
+.counter input:disabled {
   border-radius: 4px;
   border: 1px solid #2f3676;
   background: #dde3e9;
@@ -138,8 +148,13 @@ body {
 }
 
 .counter #error {
-  border-color: #F33232;
-  background: #F59393;
+  border-color: #f33232;
+  background: #f59393;
+}
+
+.count-sticker#error {
+  border-color: #f33232;
+  background: #f59393;
 }
 
 .counter button {
@@ -156,6 +171,10 @@ body {
 
 .counter button:hover {
   background: #191847;
+}
+
+.counter button:disabled {
+  background: #c5cfd6;
 }
 
 .footer {
@@ -202,4 +221,19 @@ body {
   color: #00c57c;
   font-size: 18px;
   font-weight: 600;
+}
+
+.submition-message#disabled {
+  visibility: hidden;
+}
+
+.error-message {
+  font-size: 14px;
+  color: #f33232;
+  padding-top: 8px;
+  font-weight: bold;
+}
+
+.error-message#disabled {
+  visibility: hidden;
 }

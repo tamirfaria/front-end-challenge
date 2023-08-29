@@ -12,7 +12,7 @@
   <main class="box">
 
     <header class="header">
-      <h1 class="title">Formulário <br/> para compra de <em>Pacote de Stickers</em></h1>
+      <h1 class="title">Formulário <br /> para compra de <em>Pacote de Stickers</em></h1>
     </header>
 
     <section>
@@ -24,19 +24,25 @@
           <legend class="legend">Quais stickers</legend>
 
           <label class="sticker-label">
-            <input class="sticker-checkbox" type="checkbox" name="sticker" value="React" />
+            <input class="sticker-checkbox" id="react-checkbox"
+            type="checkbox"
+            name="sticker"
+            value="React" />
             React
           </label>
 
           <label class="sticker-label">
-            <input class="sticker-checkbox" type="checkbox" name="sticker" value="Vue" />
+            <input class="sticker-checkbox" id="vue-checkbox" type="checkbox" name="sticker"
+            value="Vue" />
             Vue
           </label>
 
           <label class="sticker-label">
-            <input class="sticker-checkbox" type="checkbox" name="sticker" value="Angular" />
+            <input class="sticker-checkbox" id="angular-checkbox" type="checkbox" name="sticker"
+            value="Angular" />
             Angular
           </label>
+          <span class="error-message" id="disabled">Escolha ao menos um dos tipos de sticker!</span>
         </fieldset>
 
         <fieldset class="fieldset">
@@ -46,18 +52,19 @@
           <legend class="legend">Quantos stickers de cada?</legend>
 
           <div class="counter">
-            <button type="button" aria-label="Diminuir quantidade de stickers selecionados">
+            <button type="button" id="decrement" aria-label="Diminuir quantidade de stickers selecionados">
               -
             </button>
 
             <label>
-              <input type="text" name="quantidade" value="0" placeholder="0" />
+              <input type="text" class="count-sticker" name="quantidade" value="0" placeholder="0" disabled/>
             </label>
 
-            <button type="button" aria-label="Aumentar a quantidade de stickers selecionados">
+            <button type="button" id="increment" aria-label="Aumentar a quantidade de stickers selecionados">
               +
             </button>
           </div>
+          <span class="error-message" id="disabled">Escolha a quantidade de cada sticker!</span>
         </fieldset>
 
         <fieldset class="fieldset">
@@ -66,12 +73,12 @@
           </span>
           <legend class="legend">Observações:</legend>
           <label>
-            <textarea name="descricao" placeholder="Digite aqui suas observações"></textarea>
+            <textarea name="descricao" placeholder="Digite aqui suas observações" id="observation"></textarea>
           </label>
         </fieldset>
 
         <footer class="footer">
-          <h2 class="submition-message">Formulário enviado com sucesso!</h2>
+          <h2 class="submition-message" id="disabled">Formulário enviado com sucesso!</h2>
           <button type="submit">Enviar</button>
         </footer>
 
